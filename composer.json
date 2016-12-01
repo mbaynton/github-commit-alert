@@ -1,0 +1,26 @@
+{
+  "name": "mbaynton/github-commit-alert",
+  "description": "Mails you when new commits are pushed to any designated public github repositories",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mike Baynton",
+      "email": "mike@mbaynton.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "mbaynton\\GithubCommitAlert\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=5.6.0",
+    "ext-pdo_sqlite": "*",
+    "knplabs/github-api": "2.0.*@rc",
+    "php-http/guzzle6-adapter": "*",
+    "cache/filesystem-adapter": "0.3.*",
+    "ulrichsg/getopt-php": "^2.3",
+    "symfony/yaml": "^3.2"
+  }
+}

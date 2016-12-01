@@ -1,0 +1,9 @@
+mail:
+  to:
+    - sample@example.com
+  subject: New commits in %s pushed to github
+  body: |
+        The following new commit(s) were pushed to %1$s:
+        %2$s
+
+        Repository link: https://github.com/%1$s
