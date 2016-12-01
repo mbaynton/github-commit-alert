@@ -27,6 +27,9 @@ try {
 /* Fire up a simple cache so as to take advantage of ETag-optimized polling */
 $fs = new League\Flysystem\Filesystem(new \League\Flysystem\Adapter\Local($proj_root . DIRECTORY_SEPARATOR));
 $cache_pool = new FilesystemCachePool($fs);
+if (rand(1, 100) == 25) {
+  $cache_pool->clear(); // keep cache a reasonable size
+}
 $client->addCache($cache_pool);
 
 // What repos do we want to check?
